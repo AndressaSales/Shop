@@ -6,33 +6,39 @@ import Womens from "./Pages/Womens"
 import Kids from "./Pages/Kids"
 import Login from "./Pages/Login"
 import Cart from "./Pages/Cart"
+import Footer from "./Components/Footer"
+import SingleProduct from "./Components/SingleProduct"
 
 function App() {
   
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <> <Navbar/> <Home/> </>
+      element: <> <Navbar/> <Home/> <Footer/> </>
     },
     {
       path: '/mens',
-      element: <> <Navbar/> <Mens/> </>
+      element: <> <Navbar/> <Mens/> <Footer/> </>
     },
     {
       path: '/womens',
-      element: <> <Navbar/> <Womens/> </>
+      element: <> <Navbar/> <Womens/> <Footer/> </>
     },
     {
       path: '/Kids',
-      element: <> <Navbar/> <Kids/> </>
+      element: <> <Navbar/> <Kids/> <Footer/> </>
     },
     {
       path: '/login',
-      element: <> <Navbar/> <Login/> </>
+      element: <> <Navbar/> <Login/> <Footer/> </>
     },
     {
       path: 'cart',
-      element: <> <Navbar/> <Cart/> </>
+      element: <> <Navbar/> <Cart/> <Footer/> </>
+    },
+    {
+      path: '/product/:productId',
+      element: <> <Navbar/> <SingleProduct/>  <Footer/> </>
     }
   ]) 
 
