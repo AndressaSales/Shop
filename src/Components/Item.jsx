@@ -4,7 +4,10 @@ export default function Item({product}){
     return(
         <div className="group relative">
             <Link to={`/product/${product.id}`}>
-                <div className="aspect-h-1 aspect-w-1w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 h-96">
+                <div
+                    onClick={window.scrollTo(0,0)}
+                    className="aspect-h-1 aspect-w-1w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80 h-96"
+                >
                     <img src={product.image} alt={product.name} className="h-full w-full object-cover object-center" />
                 </div>
             </Link>
