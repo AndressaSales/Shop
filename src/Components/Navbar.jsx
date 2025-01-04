@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"
 import { MdShoppingCart } from "react-icons/md";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import NavbarResponsive from "./navbarResponsive";
+import { Shopcontext } from "../Context/ShopContext";
 
 export default function Navbar(){
 
@@ -12,6 +13,8 @@ export default function Navbar(){
     const toogleMenu = ()=>{
         setMenu(!menu)
     }
+
+    const {totalcartItems} = useContext(Shopcontext)
 
     return(
         <div className="bg-[#fff] px-4 fixed w-full z-50 shadow-sm top-0 shadow-[#ccc]">
@@ -32,7 +35,7 @@ export default function Navbar(){
                     </nav>
                     <Link className="relative w-10" to='/cart'>
                         <MdShoppingCart size={25} />
-                        <div className="bg-red-500 w-5 absolute -top-2 right-1 flex items-center justify-center rounded-full text-[#fff]">0</div>
+                        <div className="bg-red-500 w-5 absolute -top-2 right-1 flex items-center justify-center rounded-full text-[#fff]">{totalcartItems()}</div>
                     </Link>
 
                     {

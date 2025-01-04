@@ -14,11 +14,11 @@ export default function NavbarResponsive({menu, setMenu}){
               </div>
               <nav className="mt-12">
                 <ul className="flex flex-col space-y-4 text-xl text-[#f00]">
-                    <Link to='/'>Home</Link>
-                    <Link to='/mens'>Homens</Link>
-                    <Link to='/womens'>Mulheres</Link>
-                    <Link to='/kids'>Kids</Link>
-                    <Link to='/login'>Login</Link>
+                    <Link to='/'><li onClick={() => setMenu(false)}>Home</li></Link>
+                    <Link to='/mens'><li onClick={() => setMenu(false)}>Homens</li></Link>
+                    <Link to='/womens'><li onClick={() => setMenu(false)}>Mulheres</li></Link>
+                    <Link to='/kids'><li onClick={() => setMenu(false)}>Kids</li></Link>
+                    <Link to='/login'><li onClick={() => setMenu(false)}>Login</li></Link>
                 </ul>
               </nav>
            </div>
